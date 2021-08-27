@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
 use jcobhams\NewsApi\NewsApi;
 
 
@@ -24,7 +22,6 @@ class NewsController extends Controller
      * All the top headlines are shown by this function
      */
     public function index($category) {
-        $api_key = env('NEWS_API_KEY');
         $articles = $this->callNewsAPI($category)->articles;
         return view('news', compact('articles', 'category'));
     }

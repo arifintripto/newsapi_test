@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use jcobhams\NewsApi\NewsApi;
 
 class ApiController extends Controller
