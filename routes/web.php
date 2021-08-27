@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return redirect('/business');
+});
 Route::get('/{catagory}', [NewsController::class, 'index']);
 Route::get('/{category}/{id}', [NewsController::class, 'show'])->name('news_details');
